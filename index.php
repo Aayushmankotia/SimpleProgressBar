@@ -29,7 +29,7 @@ td {
 }
 
 .clicked {
-  background-color: #34666e;
+  background-color: #0f717e;
   color: white;
 }
 
@@ -105,7 +105,7 @@ div#questionDivchild {
 }
 
 .radio-container input:checked ~ .checkmark {
-  background-color: #2196F3; 
+  background-color: #0F717E; 
   border: solid #045864 1px;
 }
 
@@ -131,7 +131,7 @@ div#questionDivchild {
 
 /* Style for checked text */
 .radio-container input:checked ~ .radio-label {
-  background-color: #2196F3; 
+  background-color: #0F717E;
 }
 
 .radio-label {
@@ -330,11 +330,6 @@ div#questionDivchild {
 
     function clearSelectedInfo() {
       document.getElementById('selectedInfo').innerHTML = '';
-
-      if(!cell.classList.contains('clicked')){
-      document.getElementById('defaultprogressBar').innerHTML = '';
-      document.getElementById('progressBar').innerHTML = '';
-      }
     }
 
     function highlightQuestionDiv(questionDiv) {
@@ -342,8 +337,9 @@ div#questionDivchild {
     }
 
     function unhighlightQuestionDiv(questionDiv) {
-     var unhighlight=  questionDiv.style.display = 'none';
+      questionDiv.style.display = 'none';
     }
+
 
     function updateScore() {
       var visibleDivs = document.querySelectorAll('.question-container[style="display: block;"]');
